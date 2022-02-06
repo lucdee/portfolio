@@ -1,0 +1,69 @@
+@use '../../../../styles/colors.scss';
+@use '../../../../styles/breakpoints.scss';
+
+.recourse-card-container {
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0px 0px 20px rgba(55, 61, 79, 0.16);
+  border-radius: 0.75rem;
+
+  width: 100%;
+
+  &:hover {
+    border: 1px solid colors.$pink;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.recourse-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  p {
+    color: colors.$text-light;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &:first-child {
+      color: colors.$white;
+    }
+  }
+
+  @include breakpoints.and-up(md) {
+    padding: 1.5rem;
+  }
+}
+
+.recourse-card-image-container {
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.recourse-card-content {
+  padding: 1rem;
+
+  h3 {
+    color: colors.$white;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    text-decoration: none;
+  }
+
+  p {
+    color: colors.$white;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  @include breakpoints.and-up(md) {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,31 @@
+@use '../../styles/colors.scss';
+
+@keyframes loadingAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.see-more-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 6rem auto;
+
+  &::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+
+    animation: loadingAnimation 1s linear infinite;
+    background: transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid colors.$gray300;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-radius: 50%;
+  }
+}

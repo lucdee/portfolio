@@ -1,0 +1,49 @@
+@use '../../../styles/colors.scss';
+
+.nav-item-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.75);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 0px;
+    width: 0%;
+    height: 2px;
+    transition: all 0.4s ease 0s;
+  }
+
+  p {
+    color: #7b46a1;
+  }
+
+  svg {
+    color: #7b46a1;
+    transition: transform 0.2s;
+  }
+}
+
+.is-active {
+  p {
+    color: colors.$title;
+  }
+
+  svg {
+    transform: rotate(90deg);
+  }
+
+  &::before {
+    background: colors.$title;
+    width: 60%;
+  }
+}

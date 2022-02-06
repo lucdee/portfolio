@@ -1,0 +1,34 @@
+@use '../../../styles/breakpoints.scss';
+
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.clickableListContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  z-index: 2;
+
+  @include breakpoints.and-up(lg) {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.listContent {
+  display: flex;
+  margin: 2rem 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.animate {
+  animation: opacityAnimation 1s;
+}

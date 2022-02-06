@@ -1,0 +1,105 @@
+/* BUTTONS STYLES */
+
+.btn-primary {
+  background: colors.$primary;
+  border: 2px solid colors.$primary;
+  color: colors.$white;
+}
+
+.btn-secondary {
+  background: colors.$secondary;
+  border: 2px solid colors.$secondary;
+  color: colors.$white;
+}
+
+.btn-success {
+  background: colors.$success;
+  border: 2px solid colors.$success;
+  color: colors.$white;
+}
+
+.btn-info {
+  background: colors.$info;
+  border: 2px solid colors.$info;
+  color: colors.$white;
+}
+
+.btn-warning {
+  background: colors.$warning;
+  border: 2px solid colors.$warning;
+  color: colors.$white;
+}
+
+.btn-danger {
+  background: colors.$error;
+  border: 2px solid colors.$error;
+  color: colors.$white;
+}
+
+/* OUTLINED BUTTONS STYLES */
+
+.btn-outlined-primary {
+  background: transparent;
+  border: 2px solid colors.$primary;
+  color: colors.$primary;
+
+  &:hover {
+    background-color: colors.$primary;
+    color: colors.$white;
+  }
+}
+
+.btn-outlined-secondary {
+  background: transparent;
+  border: 2px solid colors.$secondary;
+  color: colors.$secondary;
+
+  &:hover {
+    background-color: colors.$secondary;
+    color: colors.$white;
+  }
+}
+
+.btn-outlined-success {
+  background: transparent;
+  border: 2px solid colors.$success;
+  color: colors.$success;
+
+  &:hover {
+    background-color: colors.$success;
+    color: colors.$white;
+  }
+}
+
+.btn-outlined-info {
+  background: transparent;
+  border: 2px solid colors.$info;
+  color: colors.$info;
+
+  &:hover {
+    background-color: colors.$info;
+    color: colors.$white;
+  }
+}
+
+.btn-outlined-warning {
+  background: transparent;
+  border: 2px solid colors.$warning;
+  color: colors.$warning;
+
+  &:hover {
+    background-color: colors.$warning;
+    color: colors.$white;
+  }
+}
+
+.btn-outlined-danger {
+  background: transparent;
+  border: 2px solid colors.$error;
+  color: colors.$error;
+
+  &:hover {
+    background-color: colors.$error;
+    color: colors.$white;
+  }
+}

@@ -1,0 +1,29 @@
+@use '../../../../styles/breakpoints.scss';
+
+.recursos-section {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  padding: 3rem 0.5rem 5rem 0.5rem;
+
+  @include breakpoints.and-up(xl) {
+    padding: 3rem 0 5rem 0;
+  }
+}
+
+.recursos-list-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.8rem;
+
+  margin-top: 2.5rem;
+  width: 100%;
+
+  @include breakpoints.and-up(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoints.and-up(lg) {
+    grid-template-columns: repeat(2, 48%);
+  }
+}

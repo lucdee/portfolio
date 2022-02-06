@@ -1,0 +1,37 @@
+@use '../../../styles/colors.scss';
+
+.carouselContainer {
+  width: 100%;
+
+  .customDots {
+    bottom: -2rem;
+
+    button::before {
+      font-size: 1rem;
+      color: colors.$gray800;
+    }
+  }
+
+  .slickArrow {
+    width: 20px;
+    height: 20px;
+    border: 3px solid colors.$gray200;
+    border-left: 0;
+    border-top: 0;
+    z-index: 3;
+
+    &:before {
+      content: '';
+    }
+  }
+
+  .slickPrev {
+    left: 0;
+    transform: rotate(135deg);
+  }
+
+  .slickNext {
+    right: 0;
+    transform: rotate(318deg);
+  }
+}

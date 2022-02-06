@@ -1,0 +1,10 @@
+@use '../../../styles/colors.scss';
+
+.errorMessageContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  color: colors.$error;
+  margin-top: 0.3rem;
+}

@@ -1,0 +1,118 @@
+@use 'sass:map';
+@use '../../../../styles/colors.scss';
+@use '../../../../styles/breakpoints.scss';
+@use '../../../../styles/typography.scss';
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  background: 0px 500px 1000px rgba(47, 0, 255, 0.15);
+
+  z-index: 1;
+}
+
+.hero-section-content {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  padding: 3.75rem 0.5rem;
+
+  @include breakpoints.and-up(lg) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoints.and-up(xl) {
+    padding: 4.75rem 0;
+  }
+}
+
+.hero-section-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    color: colors.$title;
+    line-height: 4rem;
+    box-shadow: 500px 300px 1000px rgba(248, 0, 248, 0.15);
+    span {
+      color: #7b46a1;
+    }
+  }
+
+  p {
+    color: white;
+    line-height: 2rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 0.5rem;
+    background: #7b46a1;
+    color: colors.$white;
+
+    font-size: map.get(typography.$sizes, 'b5');
+    font-weight: map.get(typography.$weights, 'b5');
+    text-decoration: none;
+    transition: filter 0.2s;
+
+    margin: 2.5rem 0;
+    padding: 0.5rem 1rem;
+    max-width: 250px;
+    height: 3rem;
+    width: 100%;
+
+    &:hover {
+      filter: brightness(0.85);
+    }
+  }
+
+  @include breakpoints.and-up(md) {
+    align-items: center;
+
+    p {
+      max-width: 500px;
+    }
+  }
+
+  @include breakpoints.and-up(lg) {
+    align-items: flex-start;
+    text-align: start;
+
+    a {
+      margin-top: 4rem;
+    }
+
+    figure {
+      width: 100%;
+    }
+  }
+}
+
+.image-container {
+  place-self: center;
+  width: 100%;
+  animation: go-back 3s infinite;
+
+  @include breakpoints.and-up(md) {
+    width: 65%;
+  }
+
+  @include breakpoints.and-up(lg) {
+    width: 100%;
+  }
+  @keyframes go-back {
+    0% {
+      transform: translateY(0);
+    }
+    60% {
+      transform: translateY(50px);
+    }
+  }
+}

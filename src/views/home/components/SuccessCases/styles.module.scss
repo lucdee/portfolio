@@ -1,0 +1,183 @@
+@use '../../../../styles/colors.scss';
+@use '../../../../styles/breakpoints.scss';
+
+.success-cases-section {
+  display: flex;
+  justify-content: center;
+  background: colors.$background;
+  margin: 2rem 0;
+
+  @include breakpoints.and-up(lg) {
+    margin: 12rem 0rem 0rem;
+  }
+}
+
+.success-cases-section-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 0.75rem 0 0.5rem;
+  width: 100%;
+
+  @include breakpoints.and-up(md) {
+    padding: 0 0.75rem 0 0.575rem;
+  }
+
+  @include breakpoints.and-up(xl) {
+    padding: 0;
+  }
+}
+
+.success-cases-section-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+
+  margin-bottom: 1.5rem;
+  z-index: 2;
+
+  span {
+    color: colors.$blue;
+    margin: 0.3rem 0rem;
+  }
+
+  h2 {
+    line-height: 3rem;
+    margin: 0rem 0rem 1rem 0rem;
+    color: colors.$white;
+  }
+
+  p {
+    color: colors.$white;
+    line-height: 2rem;
+  }
+
+  @include breakpoints.and-up(md) {
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoints.and-up(lg) {
+    max-width: 785px;
+  }
+}
+
+.gray-circle {
+  display: none;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 1px;
+  height: 1px;
+  z-index: 1;
+
+  @include breakpoints.and-up(lg) {
+    display: block;
+    top: -2rem;
+    width: 30rem;
+    height: 30rem;
+    background: linear-gradient(
+      45deg,
+      #7b46a1,
+      rgb(75, 13, 61),
+      #543669,
+      rgb(187, 62, 83)
+    );
+
+    background-size: 1% 1%;
+    animation: colors 100s infinite;
+  }
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.depoiment-card {
+  background: #313747;
+  border-radius: 10px;
+
+  padding: 1.5rem;
+  width: 100%;
+
+  @include breakpoints.and-up(lg) {
+    padding: 2.25rem 3.75rem;
+    margin-right: 1.5rem;
+  }
+}
+
+.depoiment-card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1rem;
+
+  p {
+    color: colors.$text;
+    line-height: 3rem;
+    margin: 1rem 0rem 2rem;
+    font-size: 20px;
+  }
+  h4 {
+    color: colors.$gray300;
+  }
+
+  @include breakpoints.and-up(md) {
+    text-align: start;
+  }
+}
+
+.depoiment-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+
+  @include breakpoints.and-up(md) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.depoiment-card-author {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    border-radius: 50%;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    margin-left: 1rem;
+    width: 100%;
+
+    strong {
+      color: colors.$pink;
+    }
+  }
+
+  @include breakpoints.and-up(md) {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}

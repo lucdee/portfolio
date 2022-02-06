@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '../../styles/colors.scss';
+@use '../../styles/typography.scss';
+
+.see-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+
+  background: transparent;
+  border: 0;
+  font-size: map.get(typography.$sizes, 'text');
+  font-weight: map.get(typography.$weights, 'text');
+  color: colors.$gray300;
+  margin: 2rem auto 6rem auto;
+  transition: color 0.2s;
+
+  &:not(:disabled):hover {
+    color: colors.$gray400;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}

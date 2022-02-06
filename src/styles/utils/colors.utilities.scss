@@ -1,0 +1,34 @@
+@use "../colors.scss";
+
+$all_colors: (
+  white: colors.$white,
+  blue: colors.$blue,
+  green: colors.$green,
+  orange: colors.$orange,
+  red: colors.$red,
+  gray50: colors.$gray50,
+  gray100: colors.$gray100,
+  gray200: colors.$gray200,
+  gray300: colors.$gray300,
+  gray400: colors.$gray400,
+  gray500: colors.$gray500,
+  gray600: colors.$gray600,
+  gray700: colors.$gray700,
+  gray800: colors.$gray800,
+  primary: colors.$primary,
+  secondary: colors.$secondary,
+  info: colors.$info,
+  warning: colors.$warning,
+  error: colors.$error,
+  success: colors.$success,
+);
+
+@each $color, $value in $all_colors {
+  .#{'' + $color} {
+    color: $value;
+  }
+
+  .bg-#{'' + $color} {
+    background-color: $value;
+  }
+}

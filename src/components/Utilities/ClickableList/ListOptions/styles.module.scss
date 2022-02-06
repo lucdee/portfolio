@@ -1,0 +1,87 @@
+@use '../../../../styles/colors.scss';
+@use '../../../../styles/breakpoints.scss';
+
+.listOptionsContainer {
+  display: block;
+  width: 100%;
+
+  @include breakpoints.and-up(md) {
+    display: flex;
+    gap: 1rem;
+  }
+
+  @include breakpoints.and-up(lg) {
+    display: block;
+    gap: 0;
+    max-width: 240px;
+  }
+}
+
+.listOption {
+  border-bottom: 2px solid colors.$gray300;
+  cursor: pointer;
+  list-style: none;
+  margin: 1.4rem 0rem;
+  padding: 0.8rem 0;
+  position: relative;
+  transition: border-bottom 0.2s;
+  width: 100%;
+
+  p {
+    color: colors.$gray300;
+    margin-bottom: 0.3rem;
+    transition: color 0.2s;
+  }
+
+  &::before {
+    content: '';
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: colors.$gray300;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    transition: background 0.2s;
+  }
+
+  &::after {
+    content: '';
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background: colors.$white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1px;
+    transition: background 0.2s;
+  }
+
+  &:hover {
+    border-color: colors.$pink;
+
+    p {
+      color: colors.$pink;
+    }
+
+    &::before,
+    &::after {
+      background: colors.$pink;
+    }
+  }
+}
+
+.isActive {
+  border-bottom-color: colors.$pink;
+
+  p {
+    color: colors.$pink;
+  }
+
+  &::before,
+  &::after {
+    background: colors.$pink;
+  }
+}

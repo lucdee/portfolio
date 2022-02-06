@@ -1,0 +1,33 @@
+// Literal colors
+
+$white: #ffffff;
+$blue: #2288ff;
+$green: #0f8b8d;
+$orange: #f2a500;
+$red: #ff3f33;
+$gray50: #f5f6fa;
+$gray100: #ecedf1;
+$gray200: #cfd3dc;
+$gray300: #9098ae;
+$gray400: #66708c;
+$gray500: #545e7a;
+$gray600: #474f65;
+$gray700: #373d4f;
+$gray800: #242938;
+$pink: #7b46a1;
+
+// Contextual Colors
+$primary: $gray700;
+$secondary: $blue;
+$info: $blue;
+$warning: $orange;
+$error: $red;
+$success: $green;
+
+// Backgrounds
+$background: #1c2029;
+
+// Text Colors
+$title: $gray600;
+$text: $gray400;
+$text-light: $gray300;

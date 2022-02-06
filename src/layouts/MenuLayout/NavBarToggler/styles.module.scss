@@ -1,0 +1,55 @@
+@use '../../../styles/colors.scss';
+@use '../../../styles/breakpoints.scss';
+
+.toggler-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+
+  background: transparent;
+  border: 0;
+  border-width: 0;
+  font-size: 0;
+
+  position: static;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+
+  @include breakpoints.and-up(lg) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: colors.$gray700;
+  transition: transform 0.5s ease 0s, opacity 0.2s;
+}
+
+.is-menu-open {
+  span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 9px);
+  }
+  span:nth-child(2) {
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    transform: rotate(-45deg) translate(2px, -7px);
+  }
+}

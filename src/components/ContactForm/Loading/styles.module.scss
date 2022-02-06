@@ -1,0 +1,38 @@
+@use '../../../styles/colors.scss';
+
+@keyframes loadingRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(55, 61, 79, 0.8);
+  width: 100%;
+  height: calc(100% + 5rem);
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &::before {
+    content: '';
+    width: 150px;
+    height: 150px;
+
+    animation: loadingRotation 1s linear infinite;
+    background: transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid colors.$gray300;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-radius: 50%;
+  }
+}

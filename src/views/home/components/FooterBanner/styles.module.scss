@@ -1,0 +1,90 @@
+@use 'sass:map';
+@use '../../../../styles/colors.scss';
+@use '../../../../styles/breakpoints.scss';
+@use '../../../../styles/typography.scss';
+
+.footer-banner-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-banner-section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  padding: 0 0.75rem 0 0.5rem;
+  width: 100%;
+  z-index: 2;
+
+  @include breakpoints.and-up(md) {
+    padding: 0 0.75rem 0 0.575rem;
+  }
+
+  @include breakpoints.and-up(xl) {
+    padding: 0;
+  }
+}
+
+.footer-banner-section-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+
+  background: colors.$gray800;
+  border-radius: 8px;
+  margin-bottom: -5rem;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+
+  p {
+    color: colors.$white;
+    line-height: 2rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: colors.$blue;
+    border-radius: 5px;
+    color: colors.$white;
+    cursor: pointer;
+    font-size: map.get(typography.$sizes, 'b5');
+    font-weight: map.get(typography.$weights, 'b5');
+    text-decoration: none;
+
+    padding: 1rem 0.575rem;
+    width: 100%;
+    transform: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.85);
+    }
+  }
+
+  @include breakpoints.and-up(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem;
+    text-align: start;
+
+    p {
+      max-width: 450px;
+    }
+
+    a {
+      max-width: 230px;
+    }
+  }
+
+  @include breakpoints.and-up(lg) {
+    padding: 3rem 6rem;
+  }
+}

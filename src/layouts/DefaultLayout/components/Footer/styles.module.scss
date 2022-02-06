@@ -1,0 +1,124 @@
+@use '../../../../styles/colors.scss';
+@use '../../../../styles/breakpoints.scss';
+
+.footer-section {
+  display: flex;
+  justify-content: center;
+  background: colors.$background;
+}
+
+.footer-section-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 0.75rem 3rem 0.5rem;
+  width: 100%;
+
+  @include breakpoints.and-up(md) {
+    padding: 10rem 0.75rem 3rem 0.575rem;
+  }
+
+  @include breakpoints.and-up(xl) {
+    padding: 10rem 0 3rem 0;
+  }
+}
+
+.footer-layout-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 2rem;
+
+  // margin-top: 10rem;
+  // margin-bottom: 3rem;
+
+  @include breakpoints.and-up(md) {
+    flex-direction: row;
+    // margin-top: 5rem;
+  }
+
+  // @include breakpoints.and-up(lg) {
+  //   margin-top: 6rem;
+  // }
+}
+
+.contact-address {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  h2 {
+    font-size: 200px;
+    color: #7b46a1;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  p {
+    color: colors.$text-light;
+    line-height: 2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.social-media-items {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  a {
+    text-decoration: none;
+    transform: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.85);
+    }
+  }
+}
+
+.footer-menu-section {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-menu-nav-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.675rem;
+
+  p {
+    color: colors.$text;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: colors.$text-light;
+    text-decoration: none;
+    transform: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.85);
+    }
+  }
+}
+
+.news-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  p {
+    color: colors.$text;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  > span {
+    color: colors.$text-light;
+    line-height: 1.5rem;
+  }
+
+  @include breakpoints.and-up(md) {
+    max-width: 350px;
+  }
+}

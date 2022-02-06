@@ -1,0 +1,28 @@
+@use 'sass:map';
+@use '../../../styles/typography.scss';
+@use '../../../styles/colors.scss';
+@import '../../../styles/utils/button.utilities.scss';
+
+.actionLinkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: map.get(typography.$sizes, 'b5');
+  font-weight: map.get(typography.$weights, 'b5');
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: filter 0.2s, color 0.2s, background 0.2s;
+  width: 100%;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  &:active {
+    transform: translate(2px, 3px);
+  }
+}
