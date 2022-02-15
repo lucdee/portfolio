@@ -25,8 +25,9 @@ export const SuccessCasesDepoiments: React.FC = () => {
           <p className="caption">
             <b>
               Estou atualmente focado em me desenvolver em Front end, utilizando
-              NextJs(Reactjs), porém também quero ganhar conhecimento em outros
-              Frameworks que utilizam javacript.
+              NextJs(Reactjs), estilização em Sass, consumir Apis em GraphQl e
+              Rest, porém também estou aberto em aprender com qualquer outra
+              biblioteca em javascript.
             </b>
           </p>
         </div>
